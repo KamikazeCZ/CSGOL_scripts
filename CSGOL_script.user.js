@@ -4,7 +4,7 @@
 // @description Script showing item names on the CSGOLounge website, under each item's image
 // @include     http://csgolounge.com/*
 // @include     http://www.csgolounge.com/*
-// @version     1.2
+// @version     1.2.1
 // @grant       GM_xmlhttpRequest
 // @downloadURL https://raw.githubusercontent.com/KamikazeCZ/CSGOL_scripts/master/CSGOL_script.user.js
 // @updateURL https://raw.githubusercontent.com/KamikazeCZ/CSGOL_scripts/master/CSGOL_script.user.js
@@ -64,7 +64,7 @@ function displayPrice(event){
 
 function getItemPrice(item){
   var name = item.querySelector(".name b").innerHTML;
-  if(["Any Offers", "Dota items", "TF2 Items", "Real Money" , "Knife", "Any Key"].indexOf(name)>=0){
+  if(["Any Offers", "Dota Items", "TF2 Items", "Real Money" , "Knife", "Any Key"].indexOf(name)>=0){
     item.querySelector(".price").innerHTML = "";
   }else{
     GM_xmlhttpRequest({
